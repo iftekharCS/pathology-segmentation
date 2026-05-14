@@ -1,0 +1,27 @@
+name: pathseg
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch>=2.1
+  - torchvision>=0.16
+  - pytorch-cuda=12.1        # change to 12.1 if your CUDA is 12.x (11.8 otherwise)
+  - cudatoolkit
+  - pip:
+    - albumentations>=1.3
+    - opencv-python>=4.8
+    - matplotlib>=3.7
+    - scikit-learn>=1.3
+    - tqdm>=4.65
+    - jupyter
+    - ipykernel
+    - pandas
+    - Pillow>=10.0
+    - lxml                   # for parsing MoNuSeg XML annotations
+    - shapely                # for polygon → mask conversion
+    - openslide-python        # for WSI handling later
+    - umap-learn             # for representation visualization later
